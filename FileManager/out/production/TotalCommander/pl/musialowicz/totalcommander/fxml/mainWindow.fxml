@@ -1,0 +1,91 @@
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.ListView?>
+
+
+<?import javafx.scene.control.Label?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<BorderPane fx:id="mainWindow" fx:controller="pl.musialowicz.totalcommander.Controller"
+            xmlns:fx="http://javafx.com/fxml" onKeyPressed="#keyHandler">
+    <top>
+        <BorderPane>
+            <left>
+                <VBox>
+                    <HBox spacing="30">
+                        <padding>
+                            <Insets left="65" top="20" bottom="20"/>
+                        </padding>
+                        <fx:define>
+                            <ToggleGroup fx:id="sortOptionsLeftSide"/>
+                        </fx:define>
+                        <RadioButton fx:id="sortByNameLeftSideDown" toggleGroup="$sortOptionsLeftSide" onAction="#leftSortBy"
+                                     selected="true"/>
+                        <RadioButton fx:id="sortByDateLeftSideDown" toggleGroup="$sortOptionsLeftSide" onAction="#leftSortBy"/>
+                    </HBox>
+                    <HBox spacing="30">
+                        <padding>
+                            <Insets left="65" top="20" bottom="20"/>
+                        </padding>
+                        <RadioButton fx:id="sortByNameLeftSideUp"  toggleGroup="$sortOptionsLeftSide" onAction="#leftSortBy"/>
+                        <RadioButton fx:id="sortByDateLeftSideUp"  toggleGroup="$sortOptionsLeftSide" onAction="#leftSortBy"/>
+                    </HBox>
+                    <Label fx:id="leftPathLabel">
+                        <padding>
+                            <Insets left="30" top="10"/>
+                        </padding>
+                    </Label>
+                </VBox>
+            </left>
+            <right>
+                <VBox>
+                    <HBox spacing="30">
+                        <padding>
+                            <Insets right="65" top="20" bottom="20"/>
+                        </padding>
+                        <fx:define>
+                            <ToggleGroup fx:id="sortOptionsRightSide"/>
+                        </fx:define>
+                        <RadioButton fx:id="sortByNameRightSideDown" toggleGroup="$sortOptionsRightSide" onAction="#rightSortBy"
+                                     selected="true"/>
+                        <RadioButton fx:id="sortByDateRightSideDown" toggleGroup="$sortOptionsRightSide" onAction="#rightSortBy"/>
+                    </HBox>
+                    <HBox spacing="30">
+                        <padding>
+                            <Insets right="65" top="20" bottom="20"/>
+                        </padding>
+                        <RadioButton fx:id="sortByNameRightSideUp"  toggleGroup="$sortOptionsRightSide" onAction="#rightSortBy"/>
+                        <RadioButton fx:id="sortByDateRightSideUp"  toggleGroup="$sortOptionsRightSide" onAction="#rightSortBy"/>
+                    </HBox>
+                    <Label fx:id="rightPathLabel">
+                        <padding>
+                            <Insets right="30" top="10"/>
+                        </padding>
+                    </Label>
+                </VBox>
+            </right>
+        </BorderPane>
+    </top>
+    <left>
+        <ListView fx:id="listView1" prefWidth="500"/>
+    </left>
+    <right>
+        <ListView fx:id="listView2" prefWidth="500"/>
+    </right>
+    <bottom>
+        <HBox>
+            <Label text="Press F7 - Create New Directory">
+                <padding>
+                    <Insets top="15" bottom="15" left="295"/>
+                </padding>
+            </Label>
+            <Label text="Press F8 - Delete File/Directory">
+                <padding>
+                    <Insets top="15" bottom="15" left="75"/>
+                </padding>
+            </Label>
+        </HBox>
+    </bottom>
+</BorderPane>

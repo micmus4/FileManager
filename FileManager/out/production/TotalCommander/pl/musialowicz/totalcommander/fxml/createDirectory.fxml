@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<GridPane xmlns="http://javafx.com/javafx"
+          xmlns:fx="http://javafx.com/fxml"
+          fx:controller="pl.musialowicz.totalcommander.CreateDirectory"
+          prefHeight="100.0" prefWidth="500.0">
+
+
+    <fx:define>
+        <ToggleGroup fx:id="whichPath"/>
+    </fx:define>
+
+    <Label text="Provide directory name:    " GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+    <TextField fx:id="fileNameField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+    <RadioButton text="Create in left area directory" fx:id="leftPathRB" GridPane.rowIndex="1" GridPane.columnIndex="0"
+                 selected="true" toggleGroup="$whichPath">
+        <padding>
+            <Insets top="15"/>
+        </padding>
+    </RadioButton>
+    <RadioButton text="Create in right area directory" fx:id="rightPathRB" GridPane.rowIndex="1" GridPane.columnIndex="1"
+                 toggleGroup="$whichPath">
+        <padding>
+            <Insets left="25" top="15"/>
+        </padding>
+    </RadioButton>
+
+</GridPane>
