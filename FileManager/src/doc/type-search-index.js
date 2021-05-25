@@ -1,1 +1,0 @@
-typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"pl.musialowicz.filemanager","l":"Controller"},{"p":"pl.musialowicz.filemanager","l":"CreateDirectory"},{"p":"pl.musialowicz.filemanager","l":"Main"}]
