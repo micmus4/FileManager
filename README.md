@@ -14,7 +14,7 @@ User can:
  - sort elements of directories based on their name or date/time creation. Those options can be applied to both ascending and descending order.
  - copy file/directory to another directory by dragging them from one list and dropping them over to another list. If user copies directory consisting of other files/directories, those files/directories will also be copied to the newly copied directory.
  
-The project has already created documentation in src/doc directory.
+
   
 Images: 
   
